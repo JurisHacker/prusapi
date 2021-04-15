@@ -1,0 +1,14 @@
+# Install hyperpixel4
+git clone https://github.com/pimoroni/hyperpixel4 -b pi4
+cd hyperpixel4/
+./install.sh
+
+# Install Fanshim
+git clone https://github.com/pimoroni/fanshim-python
+cd fanshim-python/
+./install.sh
+sudo apt install python3-pip
+sudo ./install-service.sh --on-threshold 65 --off-threshold 55 --delay 2 --noled --nobutton
+
+# Install OctoDash
+bash <(wget -qO- https://github.com/UnchartedBull/OctoDash/raw/main/scripts/install.sh)
